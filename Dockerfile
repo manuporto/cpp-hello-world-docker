@@ -1,4 +1,4 @@
-FROM ubuntu:17.10
+FROM ubuntu:14.04
 
 RUN apt update
 RUN apt install -y \
