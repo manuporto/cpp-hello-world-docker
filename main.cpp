@@ -12,7 +12,7 @@ int main () {
 	if ( pid == 0 ) {
 		*valor = getpid ();
 		cout << "[Hijo] El valor del pid es " << *valor << endl;
-        delete valor;
+        	//delete valor;
 		exit ( 0 );
 	} else {
 		*valor = getpid ();
