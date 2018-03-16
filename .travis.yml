@@ -8,4 +8,5 @@ before_install:
   - sudo apt-get update
   - sudo apt-get -y install docker-ce
   - docker build -t helloworldcpp . 
+script:  
   - docker run helloworldcpp:latest
