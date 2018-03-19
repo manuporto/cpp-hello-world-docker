@@ -1,4 +1,4 @@
-FROM ubuntu:17.10
+FROM ubuntu:14.04
 
 RUN apt update
 RUN apt install -y \
@@ -9,7 +9,9 @@ RUN apt install -y \
 RUN mkdir /src
 RUN mkdir /build
 COPY . /src
+COPY install.sh /build
 WORKDIR /build
+RUN chmod a+x install.sh
 RUN cmake ../src && make
-CMD ["valgrind", "./concus"]
+CMD ["./install.sh"]
 
