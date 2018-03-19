@@ -2,5 +2,6 @@
 
 echo "Running project"
 
-valgrind ./concus
+valgrind --leak-check=full --show-leak-kinds=all --trace-children=yes --error-exitcode=1 --errors-for-leak-kinds=all ./concus
+echo $?
 exit $?
